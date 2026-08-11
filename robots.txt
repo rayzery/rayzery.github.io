@@ -1,0 +1,5 @@
+# https://rayzery.github.io/
+User-agent: *
+Allow: /
+
+Sitemap: https://rayzery.github.io/sitemap.xml
