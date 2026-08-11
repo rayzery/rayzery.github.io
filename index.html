@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Daniel Oleksandrovic — Kladistik, Paläogeographie, Open-Source-Software</title>
+<meta name="description" content="Daniel Oleksandrovic, unabhängiger Forscher: Kladistik, Paläogeographie und Open-Source-Software, die beides zusammenführt. Projekte, Werkzeuge, ORCID.">
+<meta name="author" content="Daniel Oleksandrovic">
+<link rel="canonical" href="https://rayzery.github.io/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Daniel Oleksandrovic">
+<meta property="og:description" content="Unabhängiger Forscher — Kladistik, Paläogeographie, Open-Source-Software.">
+<meta property="og:url" content="https://rayzery.github.io/">
+<meta property="og:locale" content="de_DE">
+<meta property="profile:first_name" content="Daniel">
+
+<style>
+:root{
+  /* Akzent: ICS/CGMW-Standardfarbe des Devon. */
+  --ink:#000;
+  --paper:#e7e3dc;
+  --quiet:#8e8880;
+  --rule:#241f1a;
+  --dev:#cb8c37;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--paper);
+  font-family:Georgia,"Iowan Old Style","Source Serif 4","Noto Serif",serif;
+  font-size:18px;
+  line-height:1.62;
+  letter-spacing:.005em;
+}
+.wrap{max-width:46rem;margin:0 auto;padding:5rem 1.5rem 7rem}
+
+h1{
+  font-size:clamp(2.4rem,8vw,3.9rem);
+  line-height:1.02;
+  letter-spacing:-.028em;
+  font-weight:400;
+  margin:0 0 1.4rem;
+}
+.lede{font-size:1.16rem;margin:0 0 .4rem;max-width:34rem}
+.sub{color:var(--quiet);margin:0 0 3.4rem;max-width:34rem}
+
+/* Signatur: stratigraphisches Band, ältestes Zeitalter links. Reines CSS. */
+.strata{height:7px;margin:0 0 2.6rem;display:flex;border-radius:1px;overflow:hidden}
+.strata i{display:block;height:100%}
+.strata i:nth-child(1){flex:6;background:#7fa056}  /* Kambrium  */
+.strata i:nth-child(2){flex:4;background:#009270}  /* Ordovizium*/
+.strata i:nth-child(3){flex:2;background:#b3e1b6}  /* Silur     */
+.strata i:nth-child(4){flex:6;background:#cb8c37}  /* Devon     */
+.strata i:nth-child(5){flex:6;background:#67a599}  /* Karbon    */
+.strata i:nth-child(6){flex:5;background:#f04028}  /* Perm      */
+.strata i:nth-child(7){flex:5;background:#812b92}  /* Trias     */
+.strata i:nth-child(8){flex:6;background:#34b2c9}  /* Jura      */
+.strata i:nth-child(9){flex:8;background:#7fc64e}  /* Kreide    */
+.strata i:nth-child(10){flex:7;background:#fd9a52} /* Känozoikum*/
+
+h2{
+  font:500 .74rem/1 ui-monospace,"SF Mono","JetBrains Mono","DejaVu Sans Mono",monospace;
+  letter-spacing:.19em;text-transform:uppercase;color:var(--dev);
+  margin:3.6rem 0 1.1rem;
+}
+p{margin:0 0 1.15rem}
+section p:last-child{margin-bottom:0}
+
+a{color:var(--paper);text-decoration:none;border-bottom:1px solid var(--dev)}
+a:hover{color:var(--dev)}
+a:focus-visible{outline:2px solid var(--dev);outline-offset:3px}
+
+dl{margin:0;display:grid;grid-template-columns:9.5rem 1fr;gap:.55rem 1.25rem}
+dt{
+  font:400 .78rem/1.7 ui-monospace,"SF Mono","JetBrains Mono","DejaVu Sans Mono",monospace;
+  color:var(--quiet);letter-spacing:.04em;padding-top:.16em;
+}
+dd{margin:0}
+dd small{display:block;color:var(--quiet);font-size:.86rem;font-family:inherit}
+
+.en{border-top:1px solid var(--rule);margin-top:4rem;padding-top:2.6rem}
+footer{
+  border-top:1px solid var(--rule);margin-top:4rem;padding-top:1.6rem;
+  font:400 .78rem/1.7 ui-monospace,"SF Mono","JetBrains Mono","DejaVu Sans Mono",monospace;
+  color:var(--quiet);
+}
+@media (max-width:34rem){
+  dl{grid-template-columns:1fr;gap:.15rem}
+  dt{padding-top:.7rem}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <h1>Daniel Oleksandrovic</h1>
+  <div class="strata" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+  <p class="lede">Unabhängiger Forscher. Kladistik, Paläogeographie und die Open-Source-Software, die beides zusammenführt.</p>
+  <p class="sub">Phylogenetische Bäume und plattentektonische Rekonstruktionen werden bis heute in getrennten Werkzeugen bearbeitet. Ich baue Software, die Verwandtschaftsverhältnisse, Fossilfundpunkte und die Lage der Kontinente auf einer gemeinsamen Zeitachse zusammenführt.</p>
+
+  <section>
+    <h2>Arbeitsschwerpunkte</h2>
+    <p>Rekonstruktion historischer Biogeographie: Wie lassen sich Verwandtschaftsverhältnisse zwischen Taxa mit der Lage der Kontinente zum jeweiligen Zeitpunkt in Übereinstimmung bringen? Datengrundlagen sind unter anderem die Paleobiology Database, Open Tree of Life, TimeTree sowie plattentektonische Rekonstruktionen aus dem GPlates-/EarthByte-Umfeld.</p>
+    <p>Freie Lizenzen, reproduzierbare Builds, keine proprietären Abhängigkeiten. Entwicklung überwiegend auf Android und Linux, unter Termux beziehungsweise im Terminal.</p>
+  </section>
+
+  <section>
+    <h2>Projekte und Code</h2>
+    <dl>
+      <dt>GitHub</dt>
+      <dd><a rel="me" href="https://github.com/rayzery">github.com/rayzery</a>
+          <small>Werkzeuge für Phylogenetik und Paläogeographie</small></dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Wissenschaftliche Identität</h2>
+    <dl>
+      <dt>ORCID</dt>
+      <dd><a rel="me" href="https://orcid.org/0009-0008-6551-4172">0009-0008-6551-4172</a>
+          <small>Dauerhafte Kennung für Publikationen</small></dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>keep/android/open</h2>
+    <p>Ich unterstütze <a href="https://keepandroidopen.org">Keep Android Open</a> — gegen die verpflichtende Entwickler-Registrierung bei Google und für das Recht, auf dem eigenen Gerät zu installieren, was man will.</p>
+  </section>
+
+  <section class="en" lang="en">
+    <h2>In English</h2>
+    <p>I am <strong>Daniel Oleksandrovic</strong>, an independent researcher working on cladistics, palaeogeography, and the open-source software that connects them.</p>
+    <p>Phylogenies and plate reconstructions still live in separate tools. I build software that renders relationships, fossil occurrences and continental positions against a single deep-time axis, drawing on the Paleobiology Database, Open Tree of Life, TimeTree and GPlates/EarthByte reconstructions. Code at <a href="https://github.com/rayzery">github.com/rayzery</a>, publications under <a href="https://orcid.org/0009-0008-6551-4172">ORCID 0009-0008-6551-4172</a>.</p>
+    <p>I support <a href="https://keepandroidopen.org">Keep Android Open</a>: against mandatory developer registration with Google, and for the right to install what you want on hardware you own.</p>
+  </section>
+
+  <footer>
+    <p>Diese Seite lädt keine externen Ressourcen, setzt keine Cookies und protokolliert nichts.<br>
+    Letzte Änderung: 2026-08-11</p>
+  </footer>
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rayzery.github.io/#website",
+      "url": "https://rayzery.github.io/",
+      "name": "Daniel Oleksandrovic",
+      "inLanguage": "de",
+      "publisher": { "@id": "https://rayzery.github.io/#person" }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://rayzery.github.io/#profilepage",
+      "url": "https://rayzery.github.io/",
+      "isPartOf": { "@id": "https://rayzery.github.io/#website" },
+      "dateCreated": "2026-08-11T00:00:00+02:00",
+      "dateModified": "2026-08-11T00:00:00+02:00",
+      "mainEntity": { "@id": "https://rayzery.github.io/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rayzery.github.io/#person",
+      "name": "Daniel Oleksandrovic",
+      "givenName": "Daniel",
+      "additionalName": "Oleksandrovic",
+      "alternateName": ["Daniel Oleksandrovych"],
+      "jobTitle": "Unabhängiger Forscher",
+      "description": "Unabhängiger Forscher mit Schwerpunkt Kladistik, Paläogeographie und Open-Source-Software.",
+      "url": "https://rayzery.github.io/",
+      "mainEntityOfPage": { "@id": "https://rayzery.github.io/#profilepage" },
+      "knowsLanguage": [
+        { "@type": "Language", "name": "German",  "alternateName": "de" },
+        { "@type": "Language", "name": "English", "alternateName": "en" },
+        { "@type": "Language", "name": "Russian", "alternateName": "ru" }
+      ],
+      "knowsAbout": [
+        { "@type": "Thing", "name": "Kladistik",       "sameAs": "https://de.wikipedia.org/wiki/Kladistik" },
+        { "@type": "Thing", "name": "Paläogeographie", "sameAs": "https://de.wikipedia.org/wiki/Pal%C3%A4ogeographie" },
+        { "@type": "Thing", "name": "Phylogenetik",    "sameAs": "https://de.wikipedia.org/wiki/Phylogenetik" },
+        { "@type": "Thing", "name": "Plattentektonik", "sameAs": "https://de.wikipedia.org/wiki/Plattentektonik" },
+        { "@type": "Thing", "name": "Biogeographie",   "sameAs": "https://de.wikipedia.org/wiki/Biogeographie" }
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "https://orcid.org/0009-0008-6551-4172"
+      },
+      "sameAs": [
+        "https://github.com/rayzery",
+        "https://orcid.org/0009-0008-6551-4172"
+      ]
+    }
+  ]
+}
+</script>
+</body>
+</html>
